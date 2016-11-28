@@ -1,15 +1,19 @@
 function calculateFactorial() {
-	var x = prompt("Factorial function: enter a non-negative decimal number", 1);
-	var result = factorial(x);
+	var x = prompt("Factorial function: enter a non-negative integer number (decimal numeric system)", 1);
+	var integerPattern = new RegExp(/^\d+$/);
+	if (!integerPattern.test(x.toString())) {
+		alert ("Wrong input!");
+		console.log ("Wrong input: " + x);
+	} else {
+		var result = factorial(x);
 		alert(x + "! = " + parseExponentialToReadable(String(result)) + '\n\nThe result was additionally sent to the console.');
 		//if you want to copy the number
-		console.log(String(result));
-		//in case you're curious about the BigInteger's internal representation
-		console.log(result);
+		console.log("Factorial of " + x + ":\n\n" + String(result));
+		}
 }
 
 var factorial = function(x){
-		if (x < 0 || isNaN(x)) return "Wrong operation";
+		if (x < 0) return "Wrong operation";
 		if (x <= 1) return x;
 		//here using the https://github.com/jtobey/javascript-bignum library
 		else return BigInteger.multiply(x, factorial(x-1));
