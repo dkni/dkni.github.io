@@ -47,17 +47,36 @@ function formatBigNumber (s){
 }
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-	$("#btn").on("click", function(){
+	$(".menubtn").jqxButton({ width: '150', height: '25', theme: 'energyblue' });
+	$("#menuTree").jqxTree({
+		height: '100%',
+		width: '100%',
+		theme: 'energyblue',
+		checkboxes: true,
+		hasThreeStates: true
+	});
+	
+	$("#menuTree").jqxTree("collapseAll");
+
+	$("#main").on("click", function(){
+		$("#content").empty();
+	});
+
+	$("#order").on("click", function(){
 		$("p").toggleClass("red");
 	});
 		
-	$("#load").on("click", function(){
+	$("#book").on("click", function(){
 		$.ajax({
-			url: "content/text.txt",
-			type: "GET"			
+			url: "/content/books/White Fang/Part I/Chapter 1.txt",
+			type: "GET"
 		}).done(function(data){
-			$("#content").append(data);
+			$("#content").html(data);
 		});
+	});
+	
+	$("#fact").on("click", function(){
+		calculateFactorial();
 	});
 });
 

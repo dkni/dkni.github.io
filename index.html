@@ -3,16 +3,19 @@
 	<HEAD>
 		<title>Personal website of dkni</title>
 		<!-- Meta tags -->
-		<meta charset="utf-8">		
-		<meta name="description" content="A personal website that belongs to dkni, a software developer, who is looking for a web-developer position">
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="A personal website that belongs to dkni, a software developer, who is looking for a full stack web developer position">
 		<!-- Styles -->
-		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" href="css/main.css" type="text/css"/>
+		<link rel="stylesheet" href="js/jqwidgets/styles/jqx.base.css" type="text/css" />
+		<link rel="stylesheet" href="js/jqwidgets/styles/jqx.energyblue.css" type="text/css" />
 		<!-- Scripts -->
-		<script src="js/main.js"></script>		
+		<script type="text/javascript" src="js/main.js"></script>		
 		<!-- External libraries-->
-		<script src="js/jquery-3.1.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jqwidgets/jqx-all.js"></script>
 		<script src="js/biginteger.js"></script>
 		<script src="js/schemeNumber.js"></script>		
 	</HEAD>
@@ -22,17 +25,28 @@
 			<div id="menu">
 				<H1> Welcome to the personal website of dkni!</H1>
 				<ul>
-					<li><input type="button" value="Main page"></li>
-					<li><input type="button" id="load" value="The White Fang by Jack London"></li>
-					<li><input type="button" id="btn" value="Order Now!"></li>
-					<li><input type="button" value="About Author"></li>
-					<li><input type="button" value="Guest Book"></li>
-					<li><input type="button" onclick="calculateFactorial()" value="Factorial calculator"></li>
+					<li><input type="button" id="main" class="menubtn" value="Main page"></li>
+					<li><input type="button" id="book" class="menubtn" value="Book"></li>
+					<li><input type="button" id="order" class="menubtn" value="Order"></li>
+					<li><input type="button"id="about" class="menubtn" value="About"></li>
+					<li><input type="button" id="guest" class="menubtn" value="Guest page"></li>
+					<li><input type="button" id="fact" class="menubtn" value="Factorial"></li>
 				</ul>
 			</div>
-			<div id="sidemenu"></div>
+			<div id="sidemenu">
+				<div id='menuTree'>	
+					<ul>
+						<li>One</li>
+						<li>Two</li>
+							<ul>
+								<li>Two and a half</li>
+								<li>Two and two third</li>
+							</ul>
+						<li>Three</li>
+					</ul>
+				</div>
+			</div>
 			<div id="content">
-			
 			</div>
 		</div>
 	</BODY>

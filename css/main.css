@@ -15,12 +15,15 @@ body {
 	text-align: center;
 	height: calc(10vh - 10px);
 	width: calc(100% - 10px);
+	background: url("../images/menu-back.jpg");
+	background-size: 100% 100%;
 	border: 5px solid yellow;
 }
 
 #menu h1 {
 	margin: 0;
 	font-size: 2em;
+	color: #ECDCBA;
 }
 
 #menu ul li {
@@ -33,12 +36,29 @@ body {
 	height: calc(100% - 10vh - 10px);
 	float: left;
 	border: 5px solid green;
+	/* background: url("../images/sidemenu-back.jpg");
+	background-size: 100% 100%; */
 }
+
+#menuTree{
+	background-image: url("../images/sidemenu-back.jpg");	
+}
+
+#menuTree .jqx-widget-content {
+    background-color: transparent;
+}
+
+#menuTree li {
+	color: #ECDCBA;
+}
+
 #content{
 	width: calc(85% - 10px);
 	height: calc(100% - 10vh - 10px);
 	overflow: auto;
 	border: 5px solid blue;
+	background: url("../images/book-back.jpg");
+	background-size: 100% 100%;
 }
 
 #content h1 {
@@ -56,8 +76,4 @@ body {
 	text-align: left;
 	font-size: 1.5em;	
 	border: 5px solid purple;
-}
-
-.red {
-	background: red;
 }
