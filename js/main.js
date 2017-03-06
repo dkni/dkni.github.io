@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			url: "content/text.txt",
 			type: "GET"			
 		}).done(function(data){
-			console.log(data);
+			$("#content").append(data);
 		});
 	});
 });
