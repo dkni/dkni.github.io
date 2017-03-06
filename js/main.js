@@ -1,5 +1,8 @@
 function calculateFactorial() {
 	var x = prompt("Factorial function: enter a non-negative integer number (decimal numeric system)", 1);
+	if (x === null){
+		return;
+	}
 	var integerPattern = new RegExp(/^\d+$/);
 	if (!integerPattern.test(x.toString())) {
 		alert ("Wrong input!");
@@ -42,3 +45,38 @@ function formatBigNumber (s){
 	//separating every three digits with a comma, starting from the end
 	return s.replace(/(\d)(?=(\d{3})+$)/g, '$1,');
 }
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+	$("#btn").on("click", function(){
+		$("p").toggleClass("red");
+	});
+		
+	$("#load").on("click", function(){
+		$.ajax({
+			url: "content/text.txt",
+			type: "GET"			
+		}).done(function(data){
+			console.log(data);
+		});
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
