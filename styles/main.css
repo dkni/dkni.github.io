@@ -1,30 +1,58 @@
-h1 {
-	color: blue;
-	}
+body {
+	margin: 0;
+	width: calc(100vw - 10px);
+	height: calc(100vh - 10px);
+	border: 5px solid red;
+}
 
-			
-h2 {
-	color: red;
-	}
-
-			
-p {
-	width: 60%;
-	text-align:left;
-	margin: 25px auto;
-	}
-
-			
 #container {
-	width: 85%;
-	float: left;
-	text-align: center;
-	border-width: 100px;
-	border-style: solid;
-	border-image: url("../images/frame0.jpg") 30% repeat;
-	}
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	border: 5px solid orange;
+}
 
-			
-#secretmessage {
-	color: white;
-	}
+#menu {
+	text-align: center;
+	height: calc(10vh - 10px);
+	width: calc(100% - 10px);
+	border: 5px solid yellow;
+}
+
+#menu h1 {
+	margin: 0;
+}
+
+#menu ul li {
+	display: inline-block;
+}
+
+#sidemenu{
+	position: relative;
+	width: calc(15% - 10px);
+	height: calc(100% - 10vh - 10px);
+	float: left;
+	border: 5px solid green;
+}
+#content{
+	width: calc(85% - 10px);
+	height: calc(100% - 10vh - 10px);
+	overflow: auto;
+	border: 5px solid blue;
+}
+
+#content h1 {
+	position: relative;
+	width: 50%;
+	left: 20%;
+	text-align: center;
+	border: 5px solid purple;
+}
+
+#content p {
+	position: relative;
+	width: 50%;
+	left: 20%;
+	text-align: left;
+	font-size: 20px;	
+	border: 5px solid purple;
+}

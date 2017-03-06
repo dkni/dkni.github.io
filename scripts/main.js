@@ -6,7 +6,7 @@ function calculateFactorial() {
 		console.log ("Wrong input: " + x);
 	} else {
 		var result = factorial(x);
-		alert(x + "! = " + parseExponentialToReadable(String(result)) + '\n\nThe result was additionally sent to the console.');
+		alert(x + "! = " + formatBigNumber(String(result)) + '\n\nThe result was additionally sent to the console.');
 		//if you want to copy the number
 		console.log("Factorial of " + x + ":\n\n" + String(result));
 		}
@@ -30,11 +30,11 @@ function parseExponentialToReadable(s){
 			number[i] = '0';
 		}
 		var result = number.join(''); 
-		return formatBigNumber(result);
+		return result;
 	}
-	//if not in exponential notation, return the original value, formatted
+	//if not in exponential notation, return the original value
 	else {
-		return formatBigNumber(s);
+		return s;
 	}
 }
 
