@@ -71,6 +71,7 @@ $(document).ready(function(event) {
 			}).done(function(data){
 				$("#content").empty();
 				$("#content").html(data);
+				$("#content").scrollTop();
 			});
 		});
 	});
