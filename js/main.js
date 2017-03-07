@@ -53,8 +53,9 @@ $(document).ready(function(event) {
 		url: "https://dkni.github.io/content/books/White Fang/contents.txt",
 		type: "GET",
 	}).done(function(data){
+		data = JSON.parse(data);	
 		console.log(data);
-		data = JSON.parse(data);		
+		
 		$("#menuTree").jqxTree({
 			source: data,
 			width: '100%',
