@@ -52,12 +52,11 @@ $(document).ready(function(event) {
 		url: "https://dkni.github.io/content/books/White Fang/contents.json",
 		type: "GET"
 	}).done(function(data){
+		console.log(data);
 		$("#menuTree").jqxTree({
-			source: source,
+			source: data,
 			width: '100%',
-			height: '100%',
-			checkboxes: true,
-			hasThreeStates: true
+			height: '100%'			
 		});
 	});
 		
