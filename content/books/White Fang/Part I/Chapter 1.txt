@@ -1,4 +1,4 @@
-<h1>CHAPTER I--THE TRAIL OF THE MEAT</h1>
+<h1>CHAPTER I <BR> THE TRAIL OF THE MEAT</h1>
 
 
 <p>Dark spruce forest frowned on either side the frozen waterway.  The trees

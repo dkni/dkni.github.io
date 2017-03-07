@@ -48,9 +48,11 @@ function formatBigNumber (s){
 
 $(document).ready(function(event) { 
 	$(".menubtn").jqxButton({ width: '150', height: '25', theme: 'energyblue' });
+	
 	$.ajax({
-		url: "https://dkni.github.io/content/books/White Fang/contents.json",
-		type: "GET"
+		url: "https://dkni.github.io/content/books/White Fang/contents.txt",
+		type: "GET",
+		dataType: "json"
 	}).done(function(data){
 		console.log(data);
 		$("#menuTree").jqxTree({
@@ -73,6 +75,7 @@ $(document).ready(function(event) {
 			url: "https://dkni.github.io/content/books/White Fang/Part I/Chapter 1.txt",
 			type: "GET"
 		}).done(function(data){
+			console.log(data);
 			$("#content").html(data);
 		});
 	});
