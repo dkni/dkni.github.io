@@ -30,6 +30,10 @@ body {
 	display: inline-block;
 }
 
+.menubtn {
+	text-color: #ecdcba;
+}
+
 #sidemenu{
 	position: relative;
 	width: calc(15% - 10px);
@@ -44,12 +48,12 @@ body {
 	background-image: url("../images/sidemenu-back.jpg");
 }
 
-#menutree .jqx-widget-content {
+#menuTree .jqx-widget-content {
     background-color: transparent;
 }
 
-#menutree li {
-	 color: #ecdcba; 
+#menuTree li {
+	color: #ecdcba; 
 }
 
 #contentContainer{
@@ -68,4 +72,8 @@ body {
 	text-align: left;
 	font-size: 1.5em;	
 	border: 5px solid purple;
+}
+
+.red {
+	text-color: red;
 }

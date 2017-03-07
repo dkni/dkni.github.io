@@ -1,39 +1,39 @@
 [{
 	"label":"White Fang", "expanded": true, "items": [
 		{"label":"Part I", "items": [
-			{"label":"Chapter I"},
-			{"label":"Chapter II"},
-			{"label":"Chapter III"}
+			{"label":"Chapter 1"},
+			{"label":"Chapter 2"},
+			{"label":"Chapter 3"}
 		]},
 		{"label":"Part II", "items": [
-			{"label":"Chapter I"},
-			{"label":"Chapter II"},
-			{"label":"Chapter III"},
-			{"label":"Chapter IV"},
-			{"label":"Chapter V"}
+			{"label":"Chapter 1"},
+			{"label":"Chapter 2"},
+			{"label":"Chapter 3"},
+			{"label":"Chapter 4"},
+			{"label":"Chapter 5"}
 		]},
 		{"label":"Part III", "items": [
-			{"label":"Chapter I"},
-			{"label":"Chapter II"},
-			{"label":"Chapter III"},
-			{"label":"Chapter IV"},
-			{"label":"Chapter V"},
-			{"label":"Chapter VI"}
+			{"label":"Chapter 1"},
+			{"label":"Chapter 2"},
+			{"label":"Chapter 3"},
+			{"label":"Chapter 4"},
+			{"label":"Chapter 5"},
+			{"label":"Chapter 6"}
 		]},
 		{"label":"Part IV", "items": [
-			{"label":"Chapter I"},
-			{"label":"Chapter II"},
-			{"label":"Chapter III"},
-			{"label":"Chapter IV"},
-			{"label":"Chapter V"},
-			{"label":"Chapter VI"}
+			{"label":"Chapter 1"},
+			{"label":"Chapter 2"},
+			{"label":"Chapter 3"},
+			{"label":"Chapter 4"},
+			{"label":"Chapter 5"},
+			{"label":"Chapter 6"}
 		]},
 		{"label":"Part V", "items": [
-			{"label":"Chapter I"},
-			{"label":"Chapter II"},
-			{"label":"Chapter III"},
-			{"label":"Chapter IV"},
-			{"label":"Chapter V"}
+			{"label":"Chapter 1"},
+			{"label":"Chapter 2"},
+			{"label":"Chapter 3"},
+			{"label":"Chapter 4"},
+			{"label":"Chapter 5"}
 		]}
 	]
 }]
