@@ -1,17 +1,9 @@
 [
-                { label: "Item 1", expanded: true, items: [
-                    { label: "Item 1.1" },
-                    { label: "Item 1.2", selected: true }
-                ]
-                },
-                { label: "Item 2" },
-                { label: "Item 3" },
-                { label: "Item 4", items: [
-                    { label: "Item 4.1" },
-                    { label: "Item 4.2" }
-                ]
-                },
-                { label: "Item 5" },
-                { label: "Item 6" },
-                { label: "Item 7" }
-            ];
+	"label":"White Fang", "items": [
+		"label":"Part I", "items": [],
+		"label":"Part II", "items": [],
+		"label":"Part III", "items": [],
+		"label":"Part IV", "items": [],
+		"label":"Part V", "items": []
+	]
+]

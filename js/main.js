@@ -52,9 +52,9 @@ $(document).ready(function(event) {
 	$.ajax({
 		url: "https://dkni.github.io/content/books/White Fang/contents.txt",
 		type: "GET",
-		dataType: "json"
 	}).done(function(data){
 		console.log(data);
+		data = JSON.parse(data);		
 		$("#menuTree").jqxTree({
 			source: data,
 			width: '100%',
@@ -75,7 +75,6 @@ $(document).ready(function(event) {
 			url: "https://dkni.github.io/content/books/White Fang/Part I/Chapter 1.txt",
 			type: "GET"
 		}).done(function(data){
-			console.log(data);
 			$("#content").html(data);
 		});
 	});
