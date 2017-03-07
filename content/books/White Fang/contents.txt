@@ -1,9 +1,9 @@
-{[
+{
 	"label":"White Fang", "items": [
-		"label":"Part I", "items": [],
-		"label":"Part II", "items": [],
-		"label":"Part III", "items": [],
-		"label":"Part IV", "items": [],
-		"label":"Part V", "items": []
+		{"label":"Part I", "items": []},
+		{"label":"Part II", "items": []},
+		{"label":"Part III", "items": []},
+		{"label":"Part IV", "items": []},
+		{"label":"Part V", "items": []}
 	]
-]}
+}
