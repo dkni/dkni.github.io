@@ -46,18 +46,21 @@ function formatBigNumber (s){
 	return s.replace(/(\d)(?=(\d{3})+$)/g, '$1,');
 }
 
-document.addEventListener("DOMContentLoaded", function(event) { 
+$(document).ready(function(event) { 
 	$(".menubtn").jqxButton({ width: '150', height: '25', theme: 'energyblue' });
-	$("#menuTree").jqxTree({
-		height: '100%',
-		width: '100%',
-		theme: 'energyblue',
-		checkboxes: true,
-		hasThreeStates: true
+	$.ajax({
+		url: "https://dkni.github.io/content/books/White Fang/contents.json",
+		type: "GET"
+	}).done(function(data){
+		$("#menuTree").jqxTree({
+			source: source,
+			width: '100%',
+			height: '100%',
+			checkboxes: true,
+			hasThreeStates: true
+		});
 	});
-	
-	$("#menuTree").jqxTree("collapseAll");
-
+		
 	$("#main").on("click", function(){
 		$("#content").empty();
 	});
@@ -68,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 	$("#book").on("click", function(){
 		$.ajax({
-			url: "/content/books/White Fang/Part I/Chapter 1.txt",
+			url: "https://dkni.github.io/content/books/White Fang/Part I/Chapter 1.txt",
 			type: "GET"
 		}).done(function(data){
 			$("#content").html(data);

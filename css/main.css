@@ -36,23 +36,23 @@ body {
 	height: calc(100% - 15vh - 10px);
 	float: left;
 	border: 5px solid green;
-	/* background: url("../images/sidemenu-back.jpg");
-	background-size: 100% 100%; */
+	background: url("../images/sidemenu-back.jpg");
+	background-size: 100% 100%;
 }
 
 #menuTree{
-	background-image: url("../images/sidemenu-back.jpg");	
+	background-image: url("../images/sidemenu-back.jpg");
 }
 
-#menuTree .jqx-widget-content {
+#menutree .jqx-widget-content {
     background-color: transparent;
 }
 
-#menuTree li {
-	color: #ECDCBA;
+#menutree li {
+	 color: #ecdcba; 
 }
 
-#content{
+#contentContainer{
 	width: calc(85% - 10px);
 	height: calc(100% - 15vh - 10px);
 	overflow: auto;
@@ -69,7 +69,7 @@ body {
 	border: 5px solid purple;
 }
 
-#content p {
+#content {
 	position: relative;
 	width: 50%;
 	left: 20%;
