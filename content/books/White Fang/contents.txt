@@ -1,11 +1,9 @@
 [{
-	"label":"White Fang", "items": [
+	"label":"White Fang", "expanded": true, "items": [
 		{"label":"Part I", "items": [
 			{"label":"Chapter I"},
 			{"label":"Chapter II"},
-			{"label":"Chapter III"},
-			{"label":"Chapter IV"},
-			{"label":"Chapter V"}
+			{"label":"Chapter III"}
 		]},
 		{"label":"Part II", "items": [
 			{"label":"Chapter I"},
@@ -19,14 +17,16 @@
 			{"label":"Chapter II"},
 			{"label":"Chapter III"},
 			{"label":"Chapter IV"},
-			{"label":"Chapter V"}
+			{"label":"Chapter V"},
+			{"label":"Chapter VI"}
 		]},
 		{"label":"Part IV", "items": [
 			{"label":"Chapter I"},
 			{"label":"Chapter II"},
 			{"label":"Chapter III"},
 			{"label":"Chapter IV"},
-			{"label":"Chapter V"}
+			{"label":"Chapter V"},
+			{"label":"Chapter VI"}
 		]},
 		{"label":"Part V", "items": [
 			{"label":"Chapter I"},
