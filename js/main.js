@@ -61,10 +61,21 @@ $(document).ready(function(event) {
 		});
 		
 		$("#menuTree").on("select", function(event){
-			let item = $("#menuTree").jqxTree("getItem", event.args.element);
+			let treeChapter = event.args.element;
+			let chapter = $("#menuTree").jqxTree("getItem", treeChapter);
+			if (!/^Chapter*/.test(chapter.label)) { return; }
+			
+			let treePart = treeChapter.parentElement.parentElement;
+			let treeBook = treePart.parentElement.parentElement;
+			let part = $("#menuTree").jqxTree("getItem", treePart);
+			let book = $("#menuTree").jqxTree("getItem", treeBook);
+			
 			$.ajax({
-				url: "https://dkni.github.io/content/books/White Fang/Part I/" + item.label + ".txt",
-				type: "GET"
+				url: "https://dkni.github.io/content/books/" + book.label + "/" + part.label + "/" + chapter.label + ".txt",
+				type: "GET",
+				error: function(xhr, ajaxOptions, thrownError){
+					alert(xhr.status + " (" + xhr.statusText + ")");
+				}
 			}).done(function(data){
 				$("#content").empty();
 				$("#content").html(data);
