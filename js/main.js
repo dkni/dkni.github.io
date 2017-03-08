@@ -62,9 +62,8 @@ $(document).ready(function(event) {
 		
 		$("#menuTree").on("select", function(event){
 			let item = $("#menuTree").jqxTree("getItem", event.args.element);
-			console.log(item);
 			$.ajax({
-				url: "https://dkni.github.io/content/books/White Fang/" + item.prev().label + "/" + item.label + ".txt",
+				url: "https://dkni.github.io/content/books/White Fang/Part I/" + item.label + ".txt",
 				type: "GET"
 			}).done(function(data){
 				$("#content").empty();
