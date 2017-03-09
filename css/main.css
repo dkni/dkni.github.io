@@ -1,79 +1,57 @@
-body {
+html, body {
 	margin: 0;
-	width: calc(100vw - 10px);
-	height: calc(100vh - 10px);
-	border: 5px solid red;
+	width: 100vw;
+	height: 100vh;
 }
 
-#container {
+#mainContainer {
+	position: relative;
+	left: 20%;
+	width: 60%;
+	height: 100%;
+}
+
+#menuContainer {	
 	width: calc(100% - 10px);
-	height: calc(100% - 10px);
-	border: 5px solid orange;
+	height: calc(10vh - 10px);
+	border: 5px solid gray;
+	text-align: center;
 }
 
 #menu {
-	text-align: center;
-	height: calc(15vh - 10px);
-	width: calc(100% - 10px);
-	background: url("../images/menu-back.jpg");
-	background-size: 100% 100%;
-	border: 5px solid yellow;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
-#menu h1 {
-	margin: 0;
-	font-size: 2em;
-	color: #ECDCBA;
-}
-
-#menu ul li {
+#menu div{
 	display: inline-block;
 }
 
-.menubtn {
-	text-color: #ecdcba;
-}
-
-#sidemenu{
+#sideMenuContainer{
 	position: relative;
-	width: calc(15% - 10px);
-	height: calc(100% - 15vh - 10px);
 	float: left;
-	border: 5px solid green;
-	background: url("../images/sidemenu-back.jpg");
-	background-size: 100% 100%;
+	width: calc(20% - 10px);
+	height: calc(100% - 10vh - 10px);
+	border: 5px solid gray;
 }
 
-#menuTree{
-	background-image: url("../images/sidemenu-back.jpg");
-}
-
-#menuTree .jqx-widget-content {
-    background-color: transparent;
-}
-
-#menuTree li {
-	color: #ecdcba; 
+#sideMenu {
+	border: none;
 }
 
 #contentContainer{
-	width: calc(85% - 10px);
-	height: calc(100% - 15vh - 10px);
+	position: relative;
+	width: calc(80% - 10px);
+	height: calc(100% - 10vh - 10px);
+	border: 5px solid gray;
 	overflow: auto;
-	border: 5px solid blue;
-	background: url("../images/book-back.jpg");
-	background-size: 100% 100%;
 }
 
 #content {
 	position: relative;
-	width: 50%;
-	left: 20%;
-	text-align: left;
-	font-size: 1.5em;	
-	border: 5px solid purple;
-}
-
-.red {
-	text-color: red;
+	width: 70%;
+	left: 15%;
+	text-align: justify;
+	font-size: 1em;
 }

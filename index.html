@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
-<HTML>
-	<HEAD>
+<html>
+	<head>
 		<title>Personal website of dkni</title>
 		<!-- Meta tags -->
 		<meta charset="utf-8">
@@ -9,38 +9,35 @@
 		<!-- Styles -->
 		<link rel="stylesheet" href="css/main.css" type="text/css"/>
 		<link rel="stylesheet" href="js/jqwidgets/styles/jqx.base.css" type="text/css" />
-		<link rel="stylesheet" href="js/jqwidgets/styles/jqx.energyblue.css" type="text/css" />
 		<link rel="stylesheet" href="js/jqwidgets/styles/jqx.darkblue.css" type="text/css" />
 		<!-- External libraries-->
 		<script src="js/jquery-3.1.1.min.js"></script>
 		<script src="js/jqwidgets/jqxcore.js"></script>
-		<script src="js/jqwidgets/jqx-all.js"></script>
+		<script src="js/jqwidgets/jqxtree.js"></script>
+		<script src="js/jqwidgets/jqxbuttons.js"></script>
 		<script src="js/biginteger.js"></script>
 		<script src="js/schemeNumber.js"></script>
 		<!-- Scripts -->
 		<script src="js/main.js"></script>		
-	</HEAD>
+	</head>
 	
-	<BODY>
-		<div id="container">
-			<div id="menu">
-				<H1> Welcome to the personal website of dkni!</H1>
-				<ul>
-					<li><input type="button" id="main" class="menubtn" value="Main page"></li>
-					<li><input type="button" id="book" class="menubtn" value="Book"></li>
-					<li><input type="button" id="order" class="menubtn" value="Order"></li>
-					<li><input type="button" id="about" class="menubtn" value="About"></li>
-					<li><input type="button" id="guest" class="menubtn" value="Guest page"></li>
-					<li><input type="button" id="fact" class="menubtn" value="Factorial"></li>
-				</ul>
+	<body>
+		<div id="mainContainer">
+			<div id="menuContainer">
+				<div id="menu">
+					<div><input type="button" id="main" class="menubtn" value="Main"></div>
+					<div><input type="button" id="books" class="menubtn" value="Books"></div>
+					<div><input type="button" id="fact" class="menubtn" value="Factorial"></div>
+					<div><input type="button" id="about" class="menubtn" value="About"></div>					
+				</div>
 			</div>
-			<div id="sidemenu">
-				<div id='menuTree'>						
+			<div id="sideMenuContainer">
+				<div id='sideMenu'>						
 				</div>
 			</div>
 			<div id="contentContainer">
 				<div id="content"></div>
 			</div>
 		</div>
-	</BODY>
-</HTML>
+	</body>
+</html>
