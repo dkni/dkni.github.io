@@ -47,43 +47,49 @@ $(document).ready(function(event) {
 		return s.replace(/(\d)(?=(\d{3})+$)/g, '$1,');
 	}
 
-	$(".menubtn").jqxButton({ width: '150', height: '25', theme: 'darkblue' });
+	$(".menubtn").jqxButton({ width: '180', height: '45', theme: 'darkblue' });
 	
 	$.ajax({
 		url: "https://dkni.github.io/content/books/White Fang/contents.txt",
 		type: "GET",
 	}).done(function(data){
-		data = JSON.parse(data);	
-		console.log(data);
-		
-		$("#menuTree").jqxTree({
+		data = JSON.parse(data);			
+		$("#sideMenu").jqxTree({
 			source: data,
 			width: '100%',
 			height: '100%',
 			theme: 'darkblue'
 		});
 		
-		$("#menuTree").on("select", function(event){
-			let item = $("#menuTree").jqxTree("getItem", event.args.element);
+		$("#sideMenu").on("select", function(event){
+			let treeChapter = event.args.element;
+			let chapter = $("#sideMenu").jqxTree("getItem", treeChapter);
+			if (!/^Chapter*/.test(chapter.label)) { return; }
+			
+			let treePart = treeChapter.parentElement.parentElement;
+			let treeBook = treePart.parentElement.parentElement;
+			let part = $("#sideMenu").jqxTree("getItem", treePart);
+			let book = $("#sideMenu").jqxTree("getItem", treeBook);
+			
 			$.ajax({
-				url: "https://dkni.github.io/content/books/White Fang/Part I/" + item.label + ".txt",
-				type: "GET"
+				url: "https://dkni.github.io/content/books/" + book.label + "/" + part.label + "/" + chapter.label + ".txt",
+				type: "GET",
+				error: function(xhr, ajaxOptions, thrownError){
+					alert(xhr.status + " (" + xhr.statusText + ")");
+				}
 			}).done(function(data){
 				$("#content").empty();
 				$("#content").html(data);
+				$("#contentContainer").scrollTop(0);
 			});
 		});
 	});
 		
 	$("#main").on("click", function(){
 		$("#content").empty();
-	});
-
-	$("#order").on("click", function(){
-		$("p").toggleClass("red");
-	});
+	});	
 		
-	$("#book").on("click", function(){
+	$("#books").on("click", function(){
 		
 	});
 	
@@ -91,23 +97,3 @@ $(document).ready(function(event) {
 		calculateFactorial();
 	});
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
