@@ -96,4 +96,21 @@ $(document).ready(function(event) {
 	$("#fact").on("click", function(){
 		calculateFactorial();
 	});
+	
+	$("#about").on("click", function(){
+		$.ajax({
+			url: "https://dkni.github.io",
+			type: "GET",
+			error: function(xhr){
+				alert(xhr.status + " (" + xhr.statusText + ")");
+			}
+		}).done(function(data){
+			$("#content").empty();
+			$("#content").html(data);
+		});
+	});
 });
+
+
+
+
