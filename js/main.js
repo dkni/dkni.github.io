@@ -1,4 +1,10 @@
 $(document).ready(function(event) {
+	toastr.options = {
+					"positionClass": "toast-top-left",
+					"showDuration": "200",
+					"hideDuration": "500"
+				};
+				
 	function calculateFactorial() {
 		var x = prompt("Factorial function: enter a non-negative integer number (decimal numeric system)", 1);
 		if (x === null){
@@ -46,12 +52,28 @@ $(document).ready(function(event) {
 		//separating every three digits with a comma, starting from the end
 		return s.replace(/(\d)(?=(\d{3})+$)/g, '$1,');
 	}
+	
+	function clearContents(){
+		$("#sideMenu").empty();
+		$("#content").empty();
+	}
 
 	$(".menubtn").jqxButton({ width: '180', height: '45', theme: 'darkblue' });
 	
-	$.ajax({
+	
+		
+	$("#main").on("click", function(){
+		clearContents();
+	});	
+		
+	$("#books").on("click", function(){
+		clearContents();
+		$.ajax({
 		url: "https://dkni.github.io/content/books/White Fang/contents.txt",
 		type: "GET",
+		beforeSend: function(){
+			$("#sideMenu").html("<img class='loadingImg' src='content/images/LoadingIcon.gif' />");
+		}
 	}).done(function(data){
 		data = JSON.parse(data);			
 		$("#sideMenu").jqxTree({
@@ -65,7 +87,7 @@ $(document).ready(function(event) {
 			let treeChapter = event.args.element;
 			let chapter = $("#sideMenu").jqxTree("getItem", treeChapter);
 			if (!/^Chapter*/.test(chapter.label)) { return; }
-			
+			$("#content").html("<img class='loadingImg' src='content/images/LoadingIcon.gif' />");
 			let treePart = treeChapter.parentElement.parentElement;
 			let treeBook = treePart.parentElement.parentElement;
 
@@ -76,7 +98,7 @@ $(document).ready(function(event) {
 				url: "https://dkni.github.io/content/books/" + book.label + "/" + part.label + "/" + chapter.label + ".txt",
 				type: "GET",
 				error: function(xhr, ajaxOptions, thrownError){
-					alert(xhr.status + " (" + xhr.statusText + ")");
+					toastr.error(xhr.status + " (" + xhr.statusText + ")", "Error!");
 				}
 			}).done(function(data){
 				$("#content").empty();
@@ -85,28 +107,25 @@ $(document).ready(function(event) {
 			});
 		});
 	});
-		
-	$("#main").on("click", function(){
-		$("#content").empty();
-	});	
-		
-	$("#books").on("click", function(){
-		
 	});
 	
 	$("#fact").on("click", function(){
+		clearContents();
 		calculateFactorial();
 	});
 	
 	$("#about").on("click", function(){
+		clearContents();
 		$.ajax({
-			url: "https://dkni.github.io",
+			url: "https://jobs.tut.by/resume/bb771d7eff028265d10039ed1f6b616a386570",
 			type: "GET",
-			error: function(xhr){
-				alert(xhr.status + " (" + xhr.statusText + ")");
+			error: function(xhr){				
+				toastr.error("Sorry, not implemented yet!", "Error!");
 			}
 		}).done(function(data){
+			$("#sideMenu").empty();
 			$("#content").empty();
+			$("#content").css("width", "100%");
 			$("#content").html(data);
 		});
 	});

@@ -55,3 +55,9 @@ html, body {
 	text-align: justify;
 	font-size: 1em;
 }
+
+.loadingImg{
+	position: relative;
+	width: 100%;
+	heigth: 100%;
+}
