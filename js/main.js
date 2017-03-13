@@ -116,18 +116,8 @@ $(document).ready(function(event) {
 	
 	$("#about").on("click", function(){
 		clearContents();
-		$.ajax({
-			url: "https://jobs.tut.by/resume/bb771d7eff028265d10039ed1f6b616a386570",
-			type: "GET",
-			error: function(xhr){				
-				toastr.error("Sorry, not implemented yet!", "Error!");
-			}
-		}).done(function(data){
-			$("#sideMenu").empty();
-			$("#content").empty();
-			$("#content").css("width", "100%");
-			$("#content").html(data);
-		});
+		$("#content").html("<div id='rating'></div>");
+		
 	});
 });
 
